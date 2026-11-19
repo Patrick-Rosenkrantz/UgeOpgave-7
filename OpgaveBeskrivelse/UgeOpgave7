@@ -1,0 +1,40 @@
+Torsdagsopgave – Supermarked
+Torsdagsopgave om datastrukturer i Java.
+
+Du skal lave et kasseapparat, der kan udskrive en pæn kassebon.
+
+Datafiler
+I mappen data ligger der to CSV-filer, varer.csv og tilbud.csv. De indeholder blandt andet følgende oplysninger om hver vare.
+
+Varenummer (EAN-nummer)
+Navn
+Dato for sidste prisændring
+Pris
+Mængde, fx 6, 500 eller 1000
+Enhed, fx stk., gram eller ml
+tilbud.csv indeholder kun de varer, der er på tilbud. En tilbudsvare har samme EAN-nummer som i varer.csv, men prisen og datoen for prisændringen kan være anderledes.
+
+Din opgave
+Skriv kode, der indlæser varerne fra CSV-filerne som Vare-objekter og gemmer dem i passende datastrukturer. Du kan fx kalde dem alleVarer og tilbudsVarer.
+
+Lav derefter et kasseapparat, der modtager en kurv med varer, som en kunde har samlet i butikken. Kasseapparatet skal selv finde ud af, hvilke varer der er på tilbud.
+
+Kasseapparatet skal
+
+undersøge, om hver vare er på tilbud, og bruge den rigtige pris
+beregne det samlede beløb efter rabatter
+beregne, hvor stor en del af beløbet der er moms
+udskrive en kassebon, når alle varer er scannet
+Krav til kassebonen
+Saml ens varer. Hvis kunden fx køber to bananer til 2,50 kr. pr. stk., skal varenavnet Banan stå én gang. På næste linje vises antal, stykpris og samlet pris, fx 2 × 2,50 kr. = 5,00 kr.
+Vis rabatten. Hvis en vare er på tilbud, skal bonen først vise normalprisen og derefter rabatten på en separat linje som et negativt beløb.
+Håndter blandet rækkefølge. To ens varer skal samles på bonen, selv om der ligger andre varer imellem dem i kurven.
+Test med Robot.java
+Du kan kopiere Robot.java ind i dit projekt og tilpasse pakkenavnet. Robotten fylder en kurv med tilfældigt udvalgte varer og blander rækkefølgen. Nogle gange vælger den én af hver vare, andre gange vælger den flere af samme vare.
+
+Begrund dit valg af datastrukturer
+Du bestemmer selv, hvordan du opdeler koden i pakker, klasser og metoder. Når kasseapparatet virker, skal du afprøve og forklare dine valg.
+
+Sammenlign ArrayList og LinkedList. Afprøv kasseapparatet med de samme varer i samme rækkefølge i begge lister. Hvilke operationer udfører kasseapparatet på kurven, og hvilken liste ville du vælge til dem? Begrund dit valg.
+Find antallet af forskellige varer med et Set. Brug et Set med EAN-numre til at finde ud af, hvor mange forskellige varer kunden har købt. Kurven [banan, mælk, banan] indeholder tre varer, hvoraf to er forskellige. Hvis du allerede har brugt et Map til at tælle varerne, hvordan kan du så finde antallet af forskellige varer direkte fra det?
+Forklar dit valg af nøgle. Hvorfor er EAN-nummeret en egnet nøgle, når du slår priser op og samler ens varer på bonen?
